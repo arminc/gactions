@@ -1,0 +1,17 @@
+name: pr
+
+on:
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Run a one-line script
+      run: echo Hello, world!
+
+    - name: Setup Go environment
+      uses: actions/setup-go@v2.0.3
